@@ -25,8 +25,4 @@
   #match-grid .card-container.matched > .card_back {
     box-shadow: inset 0 0 5px 5px rgb(96, 213, 96);
   }
-
-  .card_back img {
-    width: 100%; /* Imaginile vor avea lățimea de 100% pe ecranele mici */
-  }
 }
