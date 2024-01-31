@@ -1,13 +1,3 @@
-@media only screen and (max-width: 600px) {
-  #rotate-message {
-    display: block;
-  }
-
-  #game-wrapper {
-    display: block;
-  }
-}
-
 #rotate-message {
   font-family: "Sniglet", cursive;
   background-color: rgb(56, 238, 254);
