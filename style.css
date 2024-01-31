@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
   body {
-    background-size: 100%; /* Modifică dimensiunea fundalului pentru ecranele mici */
+    background-size: 100%;
   }
 
   #match-grid {
@@ -24,5 +24,8 @@
   }
   #match-grid .card-container.matched > .card_back {
     box-shadow: inset 0 0 5px 5px rgb(96, 213, 96);
+  }
+  .card_back img {
+    width: 100%;
   }
 }
