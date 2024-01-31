@@ -30,3 +30,22 @@
     width: 100%; /* Imaginile vor avea lățimea de 100% pe ecranele mici */
   }
 }
+
+/*phone*/
+
+@media only screen and (max-width: 600px) {
+  #rotate-message {
+    display: block;
+  }
+  #game-wrapper {
+    display: none;
+  }
+}
+#rotate-message {
+  font-family: "Sniglet", cursive;
+  background-color: rgb(56, 238, 254);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  display: none;
+}
