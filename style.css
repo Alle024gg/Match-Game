@@ -15,8 +15,13 @@
   perspective: 600px;
 }
 #match-grid .card-container {
-  width: 100px;
-  height: 100px;
+  /* exercitii*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* exercitii*/
+  width: 80px;
+  height: 80px;
   border: 1px solid rgb(12, 58, 61);
   margin: 10px;
   position: relative;
@@ -31,4 +36,24 @@
 }
 .card_back img {
   width: 100%;
+}
+
+/*exercitii*/
+
+@media (max-width: 1024px) {
+  #game-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  #game-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+#game-wrapper > * {
+  height: auto;
 }

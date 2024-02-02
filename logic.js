@@ -16,6 +16,7 @@ var images = [
 var allImages = [];
 var shuffledImages = [];
 var matchedImages = [];
+
 function start() {
   matchedImages = [];
   cardGuess = [];
@@ -57,6 +58,7 @@ var cardHTML;
 var cardID;
 var cardGuess = [];
 var cardMatched = [];
+
 function addFlip() {
   var card = $(".card-container");
   // What happens when a card is clicked
@@ -83,14 +85,20 @@ function checkAnswers(card1, card2) {
     cardMatched.push(card1, card2);
     card1.classList.add("matched");
     card2.classList.add("matched");
-    alert("Match!");
+    //add new
+    setTimeout(() => {
+      card1.style.display = "none";
+      card2.style.display = "none";
+    }, 1000);
+    //ad new
+    alertMatch("Match!");
   } else {
     console.log("NO");
     card1.classList.remove("is-flipped");
     card2.classList.remove("is-flipped");
   }
   if (cardMatched.length == shuffledImages.length) {
-    setTimeout(() => alert("Winner winner, turkey dinner!"), 500);
+    setTimeout(() => alert("Winner winner!"), 500);
   }
 }
 function alertMatch(alertMsg) {

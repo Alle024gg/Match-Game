@@ -19,9 +19,12 @@
     <style>
       body {
         background-image: url("images/backgroud.png");
-        /* background-size: 100%; /*background size*/
+        background-size: cover;
         text-align: center;
         /*font*/
+        display: grid;
+        height: 100vh;
+        margin: 0;
       }
 
       h1 {
@@ -31,13 +34,21 @@
       }
 
       #game-wrapper {
+        display: grid;
+        place-items: center;
         margin: auto;
         margin-top: 40px;
         padding: 20px;
-        width: 760px;
+        max-width: 700px;
+        width: 100%;
         background-color: white;
         border-radius: 20px;
         border: 5px solid rgb(94, 250, 255);
+
+        /* ex*/
+        grid-gap: 1px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(10px, 1fr));
       }
 
       .card {
@@ -49,16 +60,24 @@
 
       .card_front {
         background: linear-gradient(rgb(121, 253, 255), rgb(250, 168, 247));
+        /* exercitii*/
+
+        display: grid;
+        place-items: center;
       }
 
       .card_back {
         background-color: rgb(147, 242, 255);
         transform: rotateY(180deg);
+        /*ecercitii*/
+        display: grid;
+        place-items: center;
       }
       .card_back img {
-        width: 90px;
-        height: 90px;
-        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
       }
 
       .is-flipped {
@@ -79,7 +98,6 @@
   <body>
     <div id="game-wrapper">
       <h1>Flowers Match Game</h1>
-      <h2>Rotește telefonul pentru o experiență mai bună!</h2>
       <div id="match-grid"></div>
       <div id="match-alerts"></div>
       <a onclick="start()">RESTART</a>
