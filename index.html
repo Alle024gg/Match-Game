@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       type="text/javascript"
@@ -15,6 +17,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+
+    <audio id="correctSound" src="images/music/Correct_Answer.mp3"></audio>
+    <audio id="wrongSound" src="images/music/Incorrect_Answers.mp3"></audio>
+    <audio id="winSound" src="images/music/Win_sound.mp3"></audio>
 
     <style>
       body {
@@ -115,6 +121,17 @@
       ];
 
       start();
+
+      function playCorrectSound() {
+        document.getElementById("correctSound").play();
+      }
+      function playWrongSound() {
+        document.getElementById("wrongSound").play();
+      }
+
+      function playWinSound() {
+        document.getElementById("winSound").play();
+      }
     </script>
   </body>
 </html>
